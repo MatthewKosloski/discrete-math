@@ -1,0 +1,240 @@
+\section*{Sets}
+
+A \textbf{set} is simply a collection of objects, or elements.\\
+If a set is finite and not large, we can describe it by simply listing the elements:
+
+\begin{center}
+\textit{A} = \{1, 2, 3, 4\}
+\end{center}
+
+
+The above set $A$ is made up of four elements.  \textbf{The order of the elements in a set does not matter}, therefore, a could also be specified like so:
+
+\begin{center}
+\textit{A} = \{1, 3, 4, 2\}
+\end{center}
+
+\textbf{The elements of a set are assumed to be distinct}, so any duplicate occurence of an element can be ignored.  Therefore, we could also specify set $A$ like so:
+
+\begin{center}
+\textit{A} = \{1, 2, 2, 3, 4, 4\}
+\end{center}
+
+
+If a set is very large or infinite, we can describe it using a property necessary for membership:
+
+\begin{center}
+\textit{B} = $\{x \mid x \text{ is a positive, even integer}\}$
+\end{center}
+
+The above set $B$ is made up of positive, even integers.  The vertical bar ``$\mid$'' is read as ``such that'' and the text after the bar is the property.  Therefore, $B$ can be read as ``the set of all x such that x is a positive, even integer.''
+Some sets of numbers occur frequently in mathematics and are given symbols.
+
+\begin{table}[]
+\begin{tabular}{cll}
+\multicolumn{1}{l}{Symbol} & Set              & Example of Members         \\
+\textbf{Z}                 & Integers         & -3, 0, 2, 145              \\
+\textbf{Q}                 & Rational numbers & -1/3, 0, 24/15             \\
+\textbf{R}                 & Real numbers     & -3, -1.766, 0, 4/15, $\sqrt{2}$, 2.666, \dots, $\pi$
+\end{tabular}
+\end{table}
+
+Rational numbers are quotients of integers, thus \textbf{Q} for \textit{quotient}.  The set of real numbers \textbf{R} consists of all points on a straight line extending indefinitely in either direction.
+
+We can denote the positive elements in a set using the superscript plus (e.g., \textbf{Z\textsuperscript{+}} for positive integers) and the negative elements in a set using the superscript minus (e.g., \textbf{Q\textsuperscript{-}} for negative rational numbers).\\
+
+If \textit{X} is a finite set, we let
+\begin{center}
+$|X| = \text{number of elements in } X$
+\end{center}
+
+We call $|X|$ the \textbf{cardinality} of \textit{X}.\\
+
+If we let \textit{A} = \{1, 2, 3, 4\}, then the cardinality of \textit{A} is 4, or $|A| = 4$.  The cardinality of \{\textbf{R}, \textbf{Z}\} is 2 since it contains two elements, which just happen to be sets.\\\\\textbf{Remember: an element in a set can be anything, even a set.}\\
+
+If \textit{x} is in the set \textit{X}, we write $x \in X$.  If \textit{x} is NOT in the set \textit{X}, we write $x \not\in X$.  For example, both of these are true:
+
+\begin{align*}
+    3 &\in \{1, 2, 3, 4\}\\
+    3 &\not\in \{x \mid x \text{ is a positive, even integer}\}
+\end{align*}
+
+A set with no elements is called an \textbf{empty set} and is denoted by $\emptyset$.  In other words, $\emptyset = \{\}.$
+\clearpage
+Two sets \textit{X} and \textit{Y} are \textbf{equal} ($X = Y$) if \textit{X} and \textit{Y} have the same elements.  To put it differently, for $X = Y$ to be true:
+
+\begin{center}
+For every \textit{x}, if $x \in X$, then $x \in Y$\\
+For every \textit{x}, if $x \in Y$, then $x \in X$
+\end{center}
+
+Here are two examples that demonstrate \textit{equality} among sets:\\
+
+If
+
+\begin{center}
+\textit{A} = \{1, 3, 2\} and \textit{B} = \{2, 3, 2, 1\},
+\end{center}
+
+then, by inspection, \textit{A} and \textit{B} have the same elements. Therefore $A = B$.\\\\\textbf{Remember: The elements in a set are unique, so duplicates are removed when evaluating a set.}\\
+
+If
+
+\begin{center}
+\textit{A} = $\{x \mid x^2 + x - 6 = 0 \}$ and \textit{B} = \{2, -3\},
+\end{center}
+
+then, $A = B$ in this case, too.\\
+
+For a set \textit{X} to NOT be equal to a set \textit{Y} ($X \neq Y$), \textit{X} and \textit{Y} must NOT have the same elements.  In other words, there must be at least one element in \textit{X} that is not in \textit{Y} or at least one element in \textit{Y} that is not in \textit{X} (or both).\\
+
+Here is an example that demonstrates \textit{inequality} among sets:\\
+
+If
+
+\begin{center}
+\textit{A} = \{1, 3, 2\} and \textit{B} = \{4, 2\},
+\end{center}
+
+Then, by inspection, $A \neq B$.
+\clearpage
+
+Suppose \textit{X} and \textit{Y} are sets.  If every element of \textit{X} is an element of \textit{Y}, we say \textit{X} is a \textbf{subset} of \textit{Y} and write $X \subseteq Y$.  In other words,\\
+
+If
+
+\begin{center}
+$X$ and $Y$ are sets and, for every x, $x \in X$ and $x \in Y$.
+\end{center}
+
+Then, $X \subseteq Y$.  Here are some examples demonstrating subsets:\\
+
+If
+
+\begin{center}
+\textit{C} = \{1, 3\} and \textit{A} = \{1, 2, 3, 4\},
+\end{center}
+
+then, every element of \textit{C} is an element of \textit{A}.  Therefore, $C \subseteq A$.\\
+
+Let
+
+\begin{center}
+\textit{X} = $\{x \mid x^2 + x - 2 = 0 \}$
+\end{center}
+
+We can show that $X \subseteq \textbf{Z}$:\\
+
+Remember, \textbf{Z} is a set of integers, so
+
+\begin{center}
+    \textbf{Z} = $\{x \mid x \text{ is an integer}\}$.
+\end{center}
+
+We can solve for the subset \textit{X}
+
+\begin{align*}
+x^2 + x - 2 &= 0\\
+(x+2)(x-1) &= 0
+\end{align*}
+
+which gives $x = -2 \text{ and } x = 1$. So \textit{X} = \{-2, 1\}.  Since every element of set \textit{X} is an element of set \textbf{Z}, $X \subseteq \textbf{Z}$.\\
+
+For a set \textit{X} to NOT be a subset of a set \textit{Y}, there must be at least one element of \textit{X} that is NOT a member of \textit{Y}.\\
+
+Let
+
+\begin{center}
+\textit{X} = $\{x \mid 3x^2 - x - 2 = 0 \}$
+\end{center}
+
+We can show that \textit{X} is NOT a subset of \textbf{Z}:\\
+
+If $x \in X$, then
+
+\[
+    3x^2 - x - 2 = 0.
+\]
+
+Solving for \textit{x}, we obtain $x = 1 \text{ and } x = -\frac{2}{3}$, so $X = \{1, -\frac{2}{3}\}$.  Since $-\frac{2}{3} \not\in \textbf{Z}$, \textit{X} is NOT a subset of \textbf{Z}.\\
+
+Given a set \textit{X}, $X \subseteq X$, since every element of \textit{X} is an element of itself.\\
+
+If \textit{X} is a subset of \textit{Y} and $X \neq Y$, then \textit{X} is a \textbf{proper subset} of $Y$ and we write $X \subset Y$.  If $X \subset Y$, then $X$ is ALWAYS smaller than $Y$.\\
+
+Let
+
+\begin{center}
+\textit{C} = \{1, 3\} and \textit{A} = \{1, 2, 3, 4\},
+\end{center}
+
+Then $C \subset A$ since $C \neq A$.\\
+
+\textbf{Understanding subsets versus proper subsets:}
+
+\begin{itemize}
+\item The symbol for a subset ($\subseteq$) is analogous to $\leq$.  In other words, a subset \textit{can} be the same size as its parent subset.
+\item The symbol for a proper subset ($\subset$) is analogous to $<$.  In other words, a proper subset is smaller than its parent subset.
+\end{itemize}
+
+The set of all subsets (proper or not) of a set $X$, denoted $\mathcal{P}(X)$, is called the \textbf{power set} of 
+$X$.\\
+
+If $A$ = \{a, b, c\}, then
+
+\begin{center}
+$\mathcal{P}(A) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{a, b\}, \{a, c\}, \{b, c\}, \{a, b, c\}\}$.
+\end{center}
+
+All but \{a, b, c\} are proper subsets of $A$. $|A| = 3$ and $|\mathcal{P}(A)| = 2^3 = 8$.\\\\
+In other words, given a set $X$ with $n$ elements, $|\mathcal{P}(X)| = 2^n$. 
+\clearpage
+
+Given two sets $X$ and $Y$, there are several operations that can be performed on the sets to produce a new set.\\
+
+The \textbf{union} of $X$ and $Y$,
+
+\[
+    X \union Y = \{x \mid x \in X \text{ or } x \in Y\},
+\]
+
+is a set that consists of all elements belonging to $X$ or $Y$ (or both).\\
+
+The \textbf{intersection} of $X$ and $Y$,
+
+\[
+    X \intersection Y = \{x \mid x \in X \text{ and } x \in Y\},
+\]
+
+is a set that consists of all elements belonging to $X$ and $Y$.\\
+
+The \textbf{difference} of $X$ and $Y$,
+
+\[
+    X - Y = \{x \mid x \in X \text{ and } x \not\in Y\},
+\]
+
+is a set that consists of all elements in $X$ that are not in $Y$.\\
+
+If
+
+\begin{center}
+A = \{1, 3, 5\} and B = \{4, 5, 6\}
+\end{center}
+
+then, 
+
+\begin{align*}
+    A \union B &= \{1, 3, 4, 5, 6\}\\
+    A \intersection B &= \{5\}\\
+    A - B &= \{1, 3\}\\
+    B - A &= \{4, 6\}
+\end{align*}
+
+\textbf{In general, A - B $\neq$ B - A.}\\
+
+Sets $X$ and $Y$ are \textbf{disjoint} if $X \intersection Y = \emptyset$.  In other words, if $X$ and $Y$ share no elements, they are disjoint.
+
+
+
+

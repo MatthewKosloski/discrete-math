@@ -1,0 +1,28 @@
+\documentclass[12pt]{report}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
+
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+\let\intersection\cap
+\let\union\cup
+
+\title{CS 309: Discrete Mathematical Structures Notes}
+\author{Matthew Kosloski}
+\date{ }
+
+\begin{document}
+
+%\maketitle
+%\tableofcontents
+\import{chapters/01/}{index.tex}
+
+\end{document}
