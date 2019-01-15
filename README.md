@@ -1,9 +1,9 @@
 # discrete-math-notes
 
-Notes for CS 309: Discrete Mathematical Structures.
+Notes and textbook exercises for CS 309: Discrete Mathematical Structures.
 
 ## Usage
 
 ```
-pdflatex discrete-math-notes
+pdflatex [discrete-math-notes|discrete-math-exercises]
 ```
