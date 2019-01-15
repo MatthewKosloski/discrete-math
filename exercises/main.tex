@@ -1,0 +1,29 @@
+\documentclass[12pt]{report}
+\usepackage{import}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{multicol}
+
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=black,  %choose some color if you want links to stand out
+}
+
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+\let\intersection\cap
+\let\union\cup
+
+\title{CS 309: Discrete Math (Exercises)}
+\author{Matthew Kosloski}
+\date{ }
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\import{chapters/01/}{index.tex}
+
+\end{document}
