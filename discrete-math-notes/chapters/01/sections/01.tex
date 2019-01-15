@@ -1,4 +1,8 @@
 \section*{Sets}
+\addcontentsline{toc}{section}{Sets}
+
+\subsection*{Denoting Sets}
+\addcontentsline{toc}{subsection}{Denoting Sets}
 
 A \textbf{set} is simply a collection of objects, or elements.\\
 If a set is finite and not large, we can describe it by simply listing the elements:
@@ -41,7 +45,10 @@ Some sets of numbers occur frequently in mathematics and are given symbols.
 
 Rational numbers are quotients of integers, thus \textbf{Q} for \textit{quotient}.  The set of real numbers \textbf{R} consists of all points on a straight line extending indefinitely in either direction.
 
-We can denote the positive elements in a set using the superscript plus (e.g., \textbf{Z\textsuperscript{+}} for positive integers) and the negative elements in a set using the superscript minus (e.g., \textbf{Q\textsuperscript{-}} for negative rational numbers).\\
+We can denote the positive elements in a set using the superscript plus (e.g., \textbf{Z\textsuperscript{+}} for positive integers) and the negative elements in a set using the superscript minus (e.g., \textbf{Q\textsuperscript{-}} for negative rational numbers).
+
+\subsection*{Set Cardinality}
+\addcontentsline{toc}{subsection}{Set Cardinality}
 
 If \textit{X} is a finite set, we let
 \begin{center}
@@ -59,8 +66,16 @@ If \textit{x} is in the set \textit{X}, we write $x \in X$.  If \textit{x} is NO
     3 &\not\in \{x \mid x \text{ is a positive, even integer}\}
 \end{align*}
 
+\subsection*{Empty Set}
+\addcontentsline{toc}{subsection}{Empty Set}
+
 A set with no elements is called an \textbf{empty set} and is denoted by $\emptyset$.  In other words, $\emptyset = \{\}.$
+
 \clearpage
+
+\subsection*{Set Equality}
+\addcontentsline{toc}{subsection}{Set Equality}
+
 Two sets \textit{X} and \textit{Y} are \textbf{equal} ($X = Y$) if \textit{X} and \textit{Y} have the same elements.  To put it differently, for $X = Y$ to be true:
 
 \begin{center}
@@ -86,6 +101,9 @@ If
 
 then, $A = B$ in this case, too.\\
 
+\subsection*{Set Inequality}
+\addcontentsline{toc}{subsection}{Set Inequality}
+
 For a set \textit{X} to NOT be equal to a set \textit{Y} ($X \neq Y$), \textit{X} and \textit{Y} must NOT have the same elements.  In other words, there must be at least one element in \textit{X} that is not in \textit{Y} or at least one element in \textit{Y} that is not in \textit{X} (or both).\\
 
 Here is an example that demonstrates \textit{inequality} among sets:\\
@@ -98,6 +116,9 @@ If
 
 Then, by inspection, $A \neq B$.
 \clearpage
+
+\subsection*{Subsets}
+\addcontentsline{toc}{subsection}{Subsets}
 
 Suppose \textit{X} and \textit{Y} are sets.  If every element of \textit{X} is an element of \textit{Y}, we say \textit{X} is a \textbf{subset} of \textit{Y} and write $X \subseteq Y$.  In other words,\\
 
@@ -138,7 +159,9 @@ x^2 + x - 2 &= 0\\
 (x+2)(x-1) &= 0
 \end{align*}
 
-which gives $x = -2 \text{ and } x = 1$. So \textit{X} = \{-2, 1\}.  Since every element of set \textit{X} is an element of set \textbf{Z}, $X \subseteq \textbf{Z}$.\\
+which gives $x = -2 \text{ and } x = 1$. So \textit{X} = \{-2, 1\}.  Since every element of set \textit{X} is an element of set \textbf{Z}, $X \subseteq \textbf{Z}$.
+
+\clearpage
 
 For a set \textit{X} to NOT be a subset of a set \textit{Y}, there must be at least one element of \textit{X} that is NOT a member of \textit{Y}.\\
 
@@ -160,6 +183,9 @@ Solving for \textit{x}, we obtain $x = 1 \text{ and } x = -\frac{2}{3}$, so $X =
 
 Given a set \textit{X}, $X \subseteq X$, since every element of \textit{X} is an element of itself.\\
 
+\subsection*{Proper Subsets}
+\addcontentsline{toc}{subsection}{Proper Subsets}
+
 If \textit{X} is a subset of \textit{Y} and $X \neq Y$, then \textit{X} is a \textbf{proper subset} of $Y$ and we write $X \subset Y$.  If $X \subset Y$, then $X$ is ALWAYS smaller than $Y$.\\
 
 Let
@@ -170,12 +196,18 @@ Let
 
 Then $C \subset A$ since $C \neq A$.\\
 
+
 \textbf{Understanding subsets versus proper subsets:}
 
 \begin{itemize}
 \item The symbol for a subset ($\subseteq$) is analogous to $\leq$.  In other words, a subset \textit{can} be the same size as its parent subset.
 \item The symbol for a proper subset ($\subset$) is analogous to $<$.  In other words, a proper subset is smaller than its parent subset.
 \end{itemize}
+
+\clearpage
+
+\subsection*{Power Set}
+\addcontentsline{toc}{subsection}{Power Set}
 
 The set of all subsets (proper or not) of a set $X$, denoted $\mathcal{P}(X)$, is called the \textbf{power set} of 
 $X$.\\
@@ -191,6 +223,9 @@ In other words, given a set $X$ with $n$ elements, $|\mathcal{P}(X)| = 2^n$.
 \clearpage
 
 Given two sets $X$ and $Y$, there are several operations that can be performed on the sets to produce a new set.\\
+
+\subsection*{Union, Intersection, and Difference}
+\addcontentsline{toc}{subsection}{Union, Intersection, and Difference}
 
 The \textbf{union} of $X$ and $Y$,
 
@@ -233,7 +268,102 @@ then,
 
 \textbf{In general, A - B $\neq$ B - A.}\\
 
+\subsection*{Disjoint Sets}
+\addcontentsline{toc}{subsection}{Disjoint Sets}
+
 Sets $X$ and $Y$ are \textbf{disjoint} if $X \intersection Y = \emptyset$.  In other words, if $X$ and $Y$ share no elements, they are disjoint.
+
+\subsection*{Pairwise Disjoint}
+\addcontentsline{toc}{subsection}{Pairwise Disjoint}
+
+A collection of sets $\mathcal{S}$ is said to be \textbf{pairwise disjoint} if every pair of sets within the set are disjoint.\\
+
+Let
+
+\begin{center}
+    $\mathcal{S}$ = \{$A_1$, $A_2$, $A_3$, \dots, $A_n$\}.
+\end{center}
+
+If
+
+\begin{center}
+    For every $i$ and $j$ in $\mathcal{S}$, $A_i \intersection A_j = \emptyset$, where $i \neq j$.
+\end{center}
+
+then, $\mathcal{S}$ is a pairwise disjoint set.\\
+
+For example, If
+
+\begin{center}
+    $\mathcal{S}$ = \{\{1, 4, 5\}, \{2, 6\}, \{3\}, \{7, 8\}\}.
+\end{center}
+
+then, by inspection, $\mathcal{S}$ is pairwise disjoint because no set within $\mathcal{S}$ contains common elements.
+
+\subsection*{Universal Set}
+\addcontentsline{toc}{subsection}{Universal Set}
+
+Every set is a subset of $U$, which is the universal set.  The universal set must be explicitly defined or given from context.
+
+\clearpage
+
+\subsection*{Complement Set}
+\addcontentsline{toc}{subsection}{Complement Set}
+
+A set $\overline{X} = U - X$ is the \textbf{complement} of $X$.  In other words, a \textit{complement} of a set $X$ is the set that contains all elements except those in $X$.\\
+
+Let
+\begin{align*}
+    A &= \{1, 3, 5\}\\
+    U &= \{1, 2, 3, 4, 5\}.
+\end{align*}
+
+Then the complement of $A$ is
+
+\begin{center}
+    $\overline{A} = U - A = \{2, 4\}$
+\end{center}
+
+\subsection*{Venn Diagrams}
+\addcontentsline{toc}{subsection}{Venn Diagrams}
+
+\textbf{Venn Diagrams} provide pictorial views of a set.  In a Venn Diagram, a rectangle depicts a universal set.  Subsets of the universal set are drawn as circles, and the members of a set are within the circle.
+
+\begin{figure}[h]
+\includegraphics[width=8cm]{./01/01/venn-diagram}
+\centering
+\end{figure}
+
+In the above diagram,
+
+\begin{align*}
+    1 &= \overline{(A \union B)}\\
+    2 &= A - B\\
+    3 &= A \intersection B\\
+    4 &= B - A\\
+\end{align*}
+
+\clearpage
+
+\subsection*{Ordered Pairs}
+\addcontentsline{toc}{subsection}{Ordered Pairs}
+
+As previously stated, a set is an \textit{unordered} collection of elements.  However, sometimes we want to consider the order of elements.  An \textbf{ordered pair} of elements, written $(a, b)$, is considered distinct from $(b, a)$ so long as $a \neq b$.  
+
+\subsection*{Cartesian Product}
+\addcontentsline{toc}{subsection}{Cartesian Product}
+
+If $X$ and $Y$ are sets, we let $X \times Y$ denote the set of all ordered pairs $(x, y)$, where $x \in X, y \in Y$.  We call this set of ordered pairs a \textbf{Cartesian product}.\\
+
+If $X = \{1, 2, 3\}$ and $Y = \{a, b\}$, then
+
+\begin{align*}
+X \times Y &= \{(1, a), (1, b), (2, a), (2, b), (3, a), (3, b)\}\\
+Y \times X &= \{(a, 1), (b, 1), (a, 2), (b, 2), (a, 3), (b, 3)\}
+\end{align*}
+
+Note, in general, $X \times Y \neq Y \times X$.  Also note that $|X \times Y| = |X| \cdot |Y| = 6$.\\
+It is always true that $|X \times Y| = |X| \cdot |Y|$.
 
 
 
