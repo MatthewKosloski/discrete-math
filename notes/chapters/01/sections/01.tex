@@ -268,6 +268,76 @@ then,
 
 \textbf{In general, A - B $\neq$ B - A.}\\
 
+\subsection*{Union of a Family of Sets}
+\addcontentsline{toc}{subsection}{Union of a Family of Sets}
+
+Just like how we took the union of two sets above, we can take the union of a family of sets $\mathcal{S}$.\\
+
+We define the union of a family $\mathcal{S}$ of sets to be those elements $x$ belonging to at least one set $X$ in the family $\mathcal{S}$.  In other words,
+
+\begin{center}
+    $\union$ $\mathcal{S} = \{x \mid x \in X \text{ for some } X \in \mathcal{S}\}$.
+\end{center}
+
+We can calculate the union of $\mathcal{S}$ like so:
+
+\begin{center}
+    $\bigcup$ $\mathcal{S} = \bigcup\limits_{i=1}^{n} X_i$
+\end{center}
+\begin{center}
+where $X$ is some set in $\mathcal{S}$ and $n$ is the cardinality of $\mathcal{S}$.
+\end{center}
+
+Let
+
+\begin{align*}
+    A_1 &= \{1, 2, 6, 7, 9\}\\
+    A_2 &= \{2, 5, 6, 7, 8, 9, 10\}\\
+    A_3 &= \{1, 2, 3, 4, 9\}\\
+    \mathcal{S} &= \{A_1, A_2, A_3\}
+\end{align*}
+
+Then, the union of $\mathcal{S}$ is 
+
+\begin{center}
+    $\bigcup$ $\mathcal{S} = \bigcup\limits_{i=1}^{3} A_i = A_1 \union A_2 \union A_3 = \{1, 2, 3, \dots, 10\}$. 
+\end{center}
+
+\subsection*{Intersection of a Family of Sets}
+\addcontentsline{toc}{subsection}{Intersection of a Family of Sets}
+
+Just like how we took the intersection of two sets above, we can take the intersection of a family of sets $\mathcal{S}$.\\
+
+We define the intersection of a family $\mathcal{S}$ of sets to be those elements $x$ belonging to at least one set $X$ in the family $\mathcal{S}$.  In other words,
+
+\begin{center}
+    $\intersection$ $\mathcal{S} = \{x \mid x \in X \text{ for all } X \in \mathcal{S}\}$.
+\end{center}
+
+We can calculate the intersection of $\mathcal{S}$ like so:
+
+\begin{center}
+    $\bigcap$ $\mathcal{S} = \bigcap\limits_{i=1}^{n} X_i$
+\end{center}
+\begin{center}
+where $X$ is some set in $\mathcal{S}$ and $n$ is the cardinality of $\mathcal{S}$.
+\end{center}
+
+Let
+
+\begin{align*}
+    A_1 &= \{1, 2, 6, 7, 9\}\\
+    A_2 &= \{2, 5, 6, 7, 8, 9, 10\}\\
+    A_3 &= \{1, 2, 3, 4, 9\}\\
+    \mathcal{S} &= \{A_1, A_2, A_3\}
+\end{align*}
+
+Then, the intersection of $\mathcal{S}$ is 
+
+\begin{center}
+    $\bigcap$ $\mathcal{S} = \bigcap\limits_{i=1}^{3} A_i = A_1 \intersection A_2 \intersection A_3 = \{2, 9\}$. 
+\end{center}
+
 \subsection*{Disjoint Sets}
 \addcontentsline{toc}{subsection}{Disjoint Sets}
 
@@ -368,6 +438,77 @@ If $X = \{1, 2\}$ and $Y = \{a, b\}$, and $Z = \{\alpha, \beta\}$, then
 \begin{align*}
     X \times Y \times Z = \{(1, a, \alpha), (1, a, \beta), (1, b, \alpha), (1, b, \beta), (2, a, \alpha), (2, a, \beta), (2, b, \alpha), (2, b, \beta)\}
 \end{align*}
+
+\subsection*{Set Laws}
+\addcontentsline{toc}{subsection}{Set Laws}
+
+Let $U$ be a universal set and sets $A$, $B$, and $C$ be subsets of $U$.  The following properties hold.\\
+
+\textbf{Associative laws:}
+\begin{align*}
+    (A \union B) \union C &= A \union (B \union C)\\
+    (A \intersection B) \intersection C &= A \intersection (B \intersection C)
+\end{align*}
+
+\textbf{Commutative laws:}
+\begin{align*}
+    A \union B &= B \union A\\
+    A \intersection B &= B \intersection A
+\end{align*}
+
+\clearpage
+
+\textbf{Distributive laws:}
+\begin{align*}
+    A \intersection (B \union C) &= (A \intersection B) \union (A \intersection C)\\
+    A \union (B \intersection C) &= (A \union B) \union (A \union C)
+\end{align*}
+
+\textbf{Identity laws:}
+\begin{align*}
+    A \union \emptyset = A, A \intersection U = A
+\end{align*}
+
+\textbf{Complement laws:}
+\begin{align*}
+    A \union \overline{A} = U, A \intersection \overline{A} = \emptyset
+\end{align*}
+
+\textbf{Idempotent laws:}
+\begin{align*}
+    A \union A = A, A \intersection A = A
+\end{align*}
+
+\textbf{Bound laws:}
+\begin{align*}
+    A \union U = U, A \intersection \emptyset = \emptyset
+\end{align*}
+
+\textbf{Absorption laws:}
+\begin{align*}
+    A \union (A \intersection B) = A, A \intersection (A \union B) = A
+\end{align*}
+
+\textbf{Involution law:}
+\begin{align*}
+    \overline{\overline{A}} = A
+\end{align*}
+
+\textbf{0/1 laws:}
+\begin{align*}
+    \overline{\emptyset} &= U\\
+    \overline{U} &= \emptyset
+\end{align*}
+
+\textbf{De Morgan's laws for sets}
+\begin{align*}
+    \overline{(A \union B)} &= \overline{A} \intersection \overline{B}\\
+    \overline{(A \intersection B)} &= \overline{A} \union \overline{B}
+\end{align*}
+
+
+
+
 
 
 
