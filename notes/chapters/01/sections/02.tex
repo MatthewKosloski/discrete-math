@@ -1,0 +1,162 @@
+\section*{1.2 Propositions}
+\addcontentsline{toc}{section}{1.2 Propositions}
+
+A sentence that is either true or false, but not both, is called a \textbf{proposition.}\\
+
+The following are examples of propositions:
+
+\begin{enumerate}[label=(\alph*)]
+\item There are 200 bones in the human body.
+\item Earth is the only planet in the universe that contains life.
+\item The only positive integers that divide 7 are 1 and 7 itself.
+\end{enumerate}
+
+The following are \textit{not} propositions:
+
+\begin{enumerate}[label=(\roman*)]
+\item $x + 4 = 6$.
+\item Fetch me a stack of papers, please.
+\end{enumerate}
+
+(i) is \textit{not} a proposition because the truth value of the equation is predicated on the value of $x$. (ii) is \textit{not} a proposition because it is neither true nor false, rather a command.\\
+
+The variables \textit{p}, \textit{q}, and \textit{r} are conventionally used to represent propositions.  To define a variable, such as \textit{p}, to be a proposition, use the following notation:
+
+\begin{center}
+    \textit{p}: $1 + 1 = 3$
+\end{center}
+
+In everyday language, we combine propositions, such as ``It is raining'' and ``It is cold'', with connectives, such as \textit{and} and \textit{or}, to form a single proposition, such as ``It is raining and it is cold.''
+
+\subsection*{Conjunction}
+\addcontentsline{toc}{subsection}{Conjunction}
+
+The \textbf{conjunction} of \textit{p} and \textit{q}, denoted \textit{p} $\land$ \textit{q}, is the proposition of \textit{p} and \textit{q}.  If 
+\begin{align*}
+    \textit{p}&: \text{It is raining,}\\
+    \textit{q}&: \text{It is cold,}
+\end{align*}
+
+then, the conjunction of \textit{p} and \textit{q} is
+
+\begin{center}
+    \textit{p} $\land$ \textit{q}: It is raining and it is cold.
+\end{center}
+
+
+The truth values of propositions can be illustrated using \textbf{truth tables}.  The amount of possible combinations of truth values is $2^n$, where \textit{n} is the amount of propositions.\\
+
+Here is the truth table of the proposition \textit{p} $\land$ \textit{q}:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textit{p} & \textit{q} & \textit{p} $\land$ \textit{q} \\ \hline
+T          & T          & T       \\ \hline
+T          & F          & F       \\ \hline
+F          & T          & F       \\ \hline
+F          & F          & F       \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection*{Disjunction}
+\addcontentsline{toc}{subsection}{Disjunction}
+
+The \textbf{disjunction} of \textit{p} and \textit{q}, denoted \textit{p} $\vee$ \textit{q}, is the proposition of \textit{p} or \textit{q}.  If 
+\begin{align*}
+    \textit{p}&: \text{It is spherical,}\\
+    \textit{q}&: \text{It is yellow,}
+\end{align*}
+
+then, the disjunction of \textit{p} and \textit{q} is
+
+\begin{center}
+    \textit{p} $\vee$ \textit{q}: It is spherical or it is yellow.
+\end{center}
+
+Here is the truth table of the proposition \textit{p} $\vee$ \textit{q}, called the \textit{inclusive-or} of \textit{p} and \textit{q}:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textit{p} & \textit{q} & \textit{p} $\vee$ \textit{q} \\ \hline
+T          & T          & T       \\ \hline
+T          & F          & T       \\ \hline
+F          & T          & T       \\ \hline
+F          & F          & F       \\ \hline
+\end{tabular}
+\end{table}
+
+In ordinary language, propositions being combined are normally related; but in logic, these propositions are not required to refer to the same subject matter.  For example, this proposition is permitted:
+
+\begin{center}
+$3 < 5$ or Paris is the capital of England.
+\end{center}
+
+\textbf{Remember: Logic is concerned with the form of propositions and the relation of propositions to each other and not with the subject matter.}
+
+\subsection*{Negation}
+\addcontentsline{toc}{subsection}{Negation}
+
+The \textbf{negation} of \textit{p}, denoted $\lnot p$, is the proposition not \textit{p}.  If
+
+\begin{center}
+\textit{p}: Paris is the capital of England,
+\end{center}
+
+then, negation of \textit{p} could be written as one of the following:
+\begin{align*}
+    \lnot p&: \text{It is not the case that Paris is the capital of England}\\
+    \lnot p&: \text{Paris is not the capital of England}
+\end{align*}
+
+The truth table of the proposition $\lnot p$ is the following:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textit{p} & $\lnot p$ \\ \hline
+T          & F     \\ \hline
+F          & T     \\ \hline
+\end{tabular}
+\end{table}
+
+\clearpage
+
+\subsection*{Operator Precedence}
+\addcontentsline{toc}{subsection}{Operator Precedence}
+
+In the absence of parentheses, we first evaluate $\lnot$, then $\land$, and then $\vee$.\\
+
+For example, consider the following proposition:
+
+\begin{center}
+    $\lnot p \vee q \land r$
+\end{center}
+
+We can evaluate the above proposition using the following truth table:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textit{p} & \textit{q} & \textit{r} & $\lnot p$ & $q \land r$ & $\lnot p \vee q \land r$ \\ \hline
+T          & T          & T          & F     & T       & T                \\ \hline
+T          & T          & F          & F     & F       & F                \\ \hline
+T          & F          & T          & F     & F       & F                \\ \hline
+T          & F          & F          & F     & F       & F                \\ \hline
+F          & T          & T          & T     & T       & T                \\ \hline
+F          & T          & F          & T     & F       & T                \\ \hline
+F          & F          & T          & T     & F       & T                \\ \hline
+F          & F          & F          & T     & F       & T                \\ \hline
+\end{tabular}
+\end{table}
+
+From this truth table, it is clear that $\lnot p \vee q \land r$ can be true in 5 cases and false in 3 cases.
+
+
+
+
