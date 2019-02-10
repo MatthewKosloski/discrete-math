@@ -1,0 +1,201 @@
+\section*{1.4 Arguments and Rules of Inference}
+\addcontentsline{toc}{section}{1.4 Arguments and Rules of Inference}
+
+\subsection*{Argument}
+\addcontentsline{toc}{subsection}{Argument}
+
+An \textbf{argument} consists of hypotheses together with a conclusion.  Any Argument has the form
+
+\begin{center}
+    If $p_1$ and $p_2$ and $\dots$ and $p_n$, then $q$.
+\end{center}
+
+If $p_1$ and $p_2$ and $\dots$ and $p_n$ are \textit{true}, then the conclusion \textit{q} must also be true, therefore, the argument is \textbf{valid}.  An argument is valid because of its form, not because of its content.\\
+
+An argument is a sequence of propositions written as:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+  & $p_1$ & \\
+  & $p_2$ & \\
+  & . & \\
+  & . & \\
+  & . & \\
+  & $p_n$ & \\
+\hline
+  & $\therefore q$ &
+\end{tabular}
+\end{table}
+
+The symbol $\therefore$ is read ``therefore.''  The propositions $p_1$, $p_2$, $\dots$, $p_n$ are called the \textit{hypotheses}, and the proposition \textit{q} is called the \textit{conclusion}.\\
+
+\subsection*{Deductive Reasoning and Truth Tables}
+\addcontentsline{toc}{subsection}{Deductive Reasoning and Truth Tables}
+
+You can use deductive reasoning and truth tables to determine the validity of an argument.  For example, consider the following argument and determine whether it is \textit{valid}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l@{\,}l@{\,}l@{\,}}
+  $p \rightarrow q$ & & \\
+  $p$ & & \\
+\hline
+ $\therefore q$ & &
+\end{tabular}
+\end{table}
+
+\textbf{First Solution: Deductive Reasoning}\\
+
+For the above argument to be \textit{valid}, both $p \rightarrow q$ and $p$ must be $true$.  For $p \rightarrow q$ to be $true$, $q$ must be $true$.  Since $q$ must be $true$ for $p \rightarrow q$ to be $true$, the argument is \textit{valid}.\\
+
+\textbf{Second Solution: Truth Table}\\
+
+We can also determine the argument's validity using a truth table.\\
+
+\textbf{Remember: When constructing a truth table to reason about an argument, include a column for each proposition and hypothesis and reserve the last column for the conclusion.}\\
+
+In this instance, there are two propositions $p$ and $q$, so we reserve the first two columns for them.  There are two hypotheses $p \rightarrow q$ and $p$, so we reserve the next two columns for them.  Finally, we reserve the last column for the conclusion $q$.\\
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cc|cc|c}
+\hline
+\textit{p} & \textit{q} & $p \rightarrow q$ & $p$ & $q$ \\ \hline
+T & T & T & T & T \\ 
+T & F & F & T & F \\ 
+F & T & T & F & T \\
+F & F & T & F & F \\ \hline
+\end{tabular}
+\end{table}
+
+From this truth table, it is clear that when $p \rightarrow q$ and $p$ are $true$, the conclusion $q$ is also $true$.  Therefore, the argument is \textit{valid}.
+
+\subsection*{Rules of Inference}
+\addcontentsline{toc}{subsection}{Rules of Inference}
+
+A \textbf{rule of inference} is a valid argument that is used within an even larger argument.  Here are seven rules of inference:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llll}
+  
+    \textbf{Modus Ponens}&
+    \begin{tabular}{l@{\,}l@{\,}l@{\,}}
+    $p \rightarrow q$ & & \\
+    $p$ & & \\
+    \hline
+    $\therefore q$ & &
+    \end{tabular}& 
+    
+    \textbf{Modus Tollens}&
+    \begin{tabular}{l@{\,}l@{\,}l@{\,}}
+    $p \rightarrow q$ & & \\
+    $\lnot q$ & & \\
+    \hline
+    $\therefore \lnot p$ & &
+    \end{tabular}\\& \\
+    
+    \textbf{Addition}&
+    \begin{tabular}{l@{\,}l@{\,}l@{\,}}
+    $p$ & & \\
+    \hline
+    $\therefore p \vee q$ & &
+    \end{tabular}&
+    
+    \textbf{Simplification}&
+    \begin{tabular}{l@{\,}l@{\,}l@{\,}}
+    $p \land q$ & & \\
+    \hline
+    $\therefore p$ & &
+    \end{tabular}\\& \\
+    
+    \textbf{Conjunction}&
+    \begin{tabular}{l@{\,}l@{\,}l@{\,}}
+    $p$ & & \\
+    $q$ & & \\
+    \hline
+    $\therefore p \land q$ & &
+    \end{tabular}&
+    
+    \textbf{Hypothetical Syllogism}&
+    \begin{tabular}{l@{\,}l@{\,}l@{\,}}
+    $p \rightarrow q$ & & \\
+    $q \rightarrow r$ & & \\
+    \hline
+    $\therefore p \rightarrow r$ & &
+    \end{tabular}\\& \\
+    
+    \textbf{Disjunctive Syllogism}&
+    \begin{tabular}{l@{\,}l@{\,}l@{\,}}
+    $p \vee q$ & & \\
+    $\lnot p$ & & \\
+    \hline
+    $\therefore q$ & &
+    \end{tabular}\\
+    \hline
+  
+\end{tabular}
+\end{table}
+
+Consider the following argument:
+
+\begin{center}
+If the computer has one gigabyte of memory, then it can run Minecraft.  If the computer can run Minecraft, then the graphics will be impressive.  Therefore, if the computer has one gigabyte of memory, then the graphics will be impressive.
+\end{center}
+
+If we let
+
+\begin{align*}
+    p&: \text{The computer has one gigabyte of memory,}\\
+    q&: \text{The computer can run Minecraft,}\\
+    r&: \text{The graphics will be impressive.}
+\end{align*}
+
+The argument can be written symbolically as
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l@{\,}l@{\,}l@{\,}}
+$p \rightarrow q$ & & \\
+$q \rightarrow r$ & & \\
+\hline
+$\therefore p \rightarrow r$ & &
+\end{tabular}
+\end{table}
+
+Therefore, the argument uses the Hypothetical Syllogism rule of inference.\\
+
+Represent the argument
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l}
+If 2 = 3, then I ate my hat.\\
+I ate my hat.\\
+\hline
+$\therefore 2 = 3$
+\end{tabular}
+\end{table}
+
+symbolically and determine its validity.\\
+
+Let
+\begin{align*}
+    p&: 2 = 3,\\
+    q&: \text{I ate my hat}.
+\end{align*}
+
+The argument can be written
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l@{\,}l@{\,}l@{\,}}
+$p \rightarrow q$ & & \\
+$q$ & & \\
+\hline
+$\therefore p$ & &
+\end{tabular}
+\end{table}
+
+If the argument is \textit{valid}, then whenever $p \rightarrow q$ and $q$ are both \textit{true}, $p$ must also be \textit{true}.  Suppose that $p \rightarrow q$ and $q$ are \textit{true}.  This is possible if $p$ is \textit{false} and $q$ is \textit{true}.  In this case, $p$ is \textit{false} (because $2 = 3$ is \textit{false}); thus, the argument is \textit{invalid}.
