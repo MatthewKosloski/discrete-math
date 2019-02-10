@@ -1,0 +1,377 @@
+\section*{1.3 Conditional Propositions and Logical Equivalence}
+\addcontentsline{toc}{section}{1.3 Conditional Propositions and Logical Equivalence}
+
+\subsection*{Conditional Proposition}
+\addcontentsline{toc}{subsection}{Conditional Proposition}
+
+Consider the following proposition:
+
+\begin{center}
+If it is raining outside, then I will bring an umbrella.
+\end{center}
+
+The above proposition is called a \textbf{conditional proposition}, and it states that on the condition that it is raining outside, then I will bring an umbrella.\\
+
+If we let
+\begin{align*}
+p&: \text{It is raining outside,}\\
+q&: \text{I will bring an umbrella,}
+\end{align*}
+
+we can denote the conditional proposition as
+
+\[
+    p \rightarrow q.
+\]
+
+The above can be pronounced as ``if \textit{p} then \textit{q}'' or ``\textit{p} implies \textit{q}.'' The proposition \textit{p} is called the \textbf{hypothesis} or \textbf{sufficient condition}, and the proposition \textit{q} is called the \textbf{conclusion} or \textbf{necessary condition}.\\
+
+How do you determine the truth value of a conditional proposition, such as the one above?  Suppose I say,
+
+\begin{center}
+
+If I buy a car, then I will let you drive it.
+
+\end{center}
+
+If I end up buying a car and letting you drive it, then the statement is \textit{true}.  However, if I do buy the car and do \textit{not} let you drive it, then the statement is \textit{false}.  If I do \textit{not} buy a car, the statement is still true (there is no car for you to drive, but there may be one in the future).\\  
+
+The following table illustrates the truth value of $p \rightarrow q$:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textit{p} & \textit{q} & \textit{p} $\rightarrow$ \textit{q} \\ \hline
+T          & T          & T       \\ \hline
+T          & F          & F       \\ \hline
+F          & T          & T       \\ \hline
+F          & F          & T       \\ \hline
+\end{tabular}
+\end{table}
+
+From this, it is clear that a conditional proposition is only \textit{false} when the hypothesis is \textit{true} and the conclusion is \textit{false}.\\  
+
+\subsection*{True by Default}
+\addcontentsline{toc}{subsection}{True by Default}
+
+To justify how a conditional proposition is always \textit{true} when \textit{p} is \textit{false}, consider the following proposition:
+\begin{center}
+    For all real numbers \textit{x}, if $x > 0$, then $x^2 > 0$
+\end{center}
+
+If we let
+\begin{align*}
+    P(x)&: x > 0,\\
+    Q(x)&: x^2 > 0
+\end{align*}
+
+Then we can denote the proposition as
+\begin{center}
+    if \textit{P(x)} then \textit{Q(x)}.
+\end{center}
+
+If we let $x = -2$, then \textit{P(-2)} is \textit{false} and \textit{Q(-2)} is \textit{true}.  If we let $x = 0$, then \textit{P(0)} and \textit{Q(0)} are both \textit{false}.  This is why we must define $p \rightarrow q$ to be \textit{true} no matter what the truth value of \textit{p} is.  This is called \textbf{true by default}.
+
+\subsection*{Operator Precedence}
+\addcontentsline{toc}{subsection}{Operator Precedence}
+
+In conditional propositions that involve logical operators $\land, \vee, \lnot, and \rightarrow$, the conditional operator $\rightarrow$ is evaluated last.  Therefore, we now have the following order of precedence:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textit{Operator} & \textit{Precedence} \\ \hline
+$\lnot$           & 1                   \\ \hline
+$\land$           & 2                   \\ \hline
+$\vee$            & 3                   \\ \hline
+$\rightarrow$     & 4                   \\ \hline
+\end{tabular}
+\end{table}
+
+Let \textit{p} be \textit{true}, \textit{q} be \textit{false}, and \textit{r} be \textit{true}.  Evaluate
+
+\begin{enumerate}[label=(\alph*)]
+\item $p \land q \rightarrow r$
+\item $p \vee q \rightarrow \lnot r$
+\item $p \land (q \rightarrow r)$
+\item $p \rightarrow (q \rightarrow r)$
+\end{enumerate}
+
+\begin{enumerate}[label=(\alph*)]
+\item We first evaluate $p \land q$, which is $false$, and then we evaluate $p \land q \rightarrow r$, which is \textit{true}.
+\item We first evaluate $\lnot r$, which is $false$, then we evaluate $p \vee q$, which is $true$, and finally we evalute the entire proposition $p \vee q \rightarrow \lnot r$, which is $false$.
+\item We first evaluate $(q \rightarrow r)$, which is $true$, and then evaluate $p \land (q \rightarrow r)$, which is $true$.
+\item We first evaluate $(q \rightarrow r)$, which is $true$, and then we evaluate $p \rightarrow (q \rightarrow r)$, which is $true$.
+\end{enumerate}
+
+\subsection*{Rewriting Propositions as Conditional Propositions}
+\addcontentsline{toc}{subsection}{Rewriting Propositions as Conditional Propositions}
+
+For each proposition, rewrite it as a conditional proposition in the form $p \rightarrow q$:
+
+\begin{enumerate}[label=(\alph*)]
+\item Mary will be a good student if she studies hard.
+\item John takes calculus only if he has sophomore, junior, or senior standing.
+\item When you sing, my ears hurt.
+\item A necessary condition for the Cubs to win the World Series is that they sign a right-handed relief pitcher.
+\item A sufficient condition for Maria to visit France is that she goes to the Eiffel Tower.
+\end{enumerate}
+
+(a) - (e) can be rewritten as
+
+\begin{enumerate}[label=(\alph*)]
+\item If Mary studies hard, then she will be a good student.
+\item ``\textit{p} only if \textit{q}'' is the same as ``if \textit{p} then \textit{q}'', therefore, the proposition can be rewritten as:
+\begin{center}
+If John takes calculus, then he has sophomore, junior, or senior standing.
+\end{center}
+\item \textit{When} is the same as \textit{if}; thus the proposition is rewritten as
+\begin{center}
+If you sing, then my ears hurt.
+\end{center}
+\item A \textbf{necessary condition} is a condition that is necessary for an outcome but does not guarantee the outcome, therefore, we can rewrite it as
+\begin{center}
+If the Cubs win the World Series, then they signed a right-handed relief pitcher.
+\end{center}
+\item A \textbf{sufficient condition} is a condition that, when met, guarantees an outcome; however, if it is \textit{not} met, the outcome is still possible.  We can rewrite this proposition as 
+\begin{center}
+If Maria goes to the Eiffel tower, then she visits France.
+\end{center}
+\end{enumerate}
+
+\subsection*{Converse}
+\addcontentsline{toc}{subsection}{Converse}
+
+The \textbf{converse} of $p \rightarrow q$ is $q \rightarrow p$.  
+
+Let
+\begin{align*}
+p&: 1 > 2,\\
+q&: 4 < 8.
+\end{align*}
+
+Since \textit{p} is false and \textit{q} is true, $p \rightarrow q$ is \textit{true}.  However, its converse, $q \rightarrow p$ is \textit{false}.  Thus, a conditional proposition can be \textit{true} while its converse is \textit{false}.\\
+
+For example, if we have the following conditional proposition $p \rightarrow q$, we can write its converse symbolically and in words.
+\begin{center}
+If Jerry receives a scholarship, then he will go to college.
+\end{center}
+
+Let
+\begin{align*}
+p&: \text{Jerry receives a scholarship},\\
+q&: \text{Jerry goes to college}.
+\end{align*}
+
+The converse is symbolically expressed as $q \rightarrow p$, which can be written in words as
+
+\begin{center}
+If Jerry goes to college, then he receives a scholarship.
+\end{center}
+
+Now, if Jerry does \textit{not} receive a scholarship but goes to college anyway, find the truth values of (a) and (b).
+\begin{enumerate}[label=(\alph*)]
+\item $p \rightarrow q$
+\item $q \rightarrow p$
+\end{enumerate}
+
+\begin{enumerate}[label=(\alph*)]
+\item Since Jerry did \textit{not} receive a scholarship, \textit{p} is \textit{false}, but he is still going to college, so \textit{q} is \textit{true}.  Therefore, $p \rightarrow q$ is \textit{true}.
+\item Since Jerry is going to college, \textit{q} is \textit{true}.  However, he did \textit{not} receive a scholarship, so \textit{p} is \textit{false}.  Therefore, $q \rightarrow p$ is \textit{false}.
+\end{enumerate}
+
+\subsection*{Biconditional Proposition}
+\addcontentsline{toc}{subsection}{Biconditional Proposition}
+
+A \textbf{biconditional proposition}, expressed as $p \leftrightarrow q$ or ``\textit{p} if and only if \textit{q}'', is true when \textit{p} and \textit{q} have the same truth values.  Thus, the truth value of $p \leftrightarrow q$ is defined by the following truth table:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textit{p} & \textit{q} & $p \leftrightarrow q$ \\ \hline
+T          & T          & T       \\ \hline
+T          & F          & F       \\ \hline
+F          & T          & F       \\ \hline
+F          & F          & T       \\ \hline
+\end{tabular}
+\end{table}
+
+In a biconditional proposition, \textit{p} is both necessary and sufficient for \textit{q}.
+
+\subsection*{Logical Equivalence}
+\addcontentsline{toc}{subsection}{Logical Equivalence}
+
+Propositions are said to be \textbf{logically equivalent} if they have the same truth value, regardless of the truth values of their constituent propositions $p_1, \dots, p_n$.  If \textit{P} and \textit{Q} are made up of the propositions $p_1, \dots, p_n$, we say \textit{P} and \textit{Q} are logically equivalent and write
+\[
+    P \equiv Q
+\]
+
+provided that, given any truth values of $p_1, \dots, p_n$, \textit{P} and \textit{Q} are both \textit{true} or \textit{false}.\\
+
+For example, we can show that the negation of $p \rightarrow q$ is logically equivalent to $p \land \lnot q$.  That is, 
+\[
+    \lnot (p \rightarrow q) \equiv p \land \lnot q.
+\]
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textit{p} & \textit{q} & $p \rightarrow q$ & $\lnot (p \rightarrow q)$ & $\lnot q$ & $p \land \lnot q$ \\ \hline
+T & T & T & F & F & F \\ \hline
+T & F & F & T & T & T \\ \hline
+F & T & T & F & F & F \\ \hline
+F & F & T & F & T & F \\ \hline
+\end{tabular}
+\end{table}
+
+The above demonstrates that $\lnot (p \rightarrow q)$ is logically equivalent to $p \land \lnot q$ regardless of the truth values of \textit{p} and \textit{q}.\\
+
+We can use the logical equivalence of $\lnot (p \rightarrow q)$ and $p \land \lnot q$ to help us write the negation of conditional propositions.  For example, to negate
+\begin{center}
+    if Jerry receives a scholarship, then he goes to college,
+\end{center}
+
+we let
+\begin{align*}
+p&: \text{Jerry receives a scholarship},\\
+q&: \text{Jerry goes to college.}
+\end{align*}
+
+The above proposition can be symbolically written as $p \rightarrow q$, and its negation is $\lnot (p \rightarrow q)$.  Since $\lnot (p \rightarrow q)$ is logically equivalent to $p \land \lnot q$, we can negate the proposition by expressing $p \land \lnot q$ as words like so:
+\begin{center}
+    Jerry receives a scholarship and he does not go to college.
+\end{center}
+
+\textbf{Remember: When evaluating conditional propositions, it is easier to work with the logical operators $\land$, $\vee$, and $\lnot$ than the conditional operator $\rightarrow$.}\\
+
+Additionally, $p \leftrightarrow q \equiv (p \rightarrow q) \land (q \rightarrow p)$.  This is demonstrated by the following truth table:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c}
+\hline
+\textit{p} & \textit{q} & $p \leftrightarrow q$ & $p \rightarrow q$ & $q \rightarrow p$ & $(p \rightarrow q) \land (q \rightarrow p)$  \\ \hline
+T & T & T & T & T & T \\ \hline
+T & F & F & F & T & T \\ \hline
+F & T & F & T & F & F \\ \hline
+F & F & T & T & T & T \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection*{De Morgan's Laws for Logic}
+\addcontentsline{toc}{subsection}{De Morgan's Laws for Logic}
+
+De Morgan has the following two laws for logic:
+
+\begin{align*}
+    \lnot (p \vee q) &\equiv \lnot p \land \lnot q,\\
+    \lnot (p \land q) &\equiv \lnot p \vee \lnot q
+\end{align*}
+
+\clearpage
+
+For the first law, we can demonstrate that $\lnot (p \vee q)$ is logically equivalent to $\lnot p \land \lnot q$ using the following truth table:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textit{p} & \textit{q} & $p \vee q$ & $\lnot (p \vee q)$ & $\lnot p$ & $\lnot q$ & $\lnot p \land \lnot q$ \\ \hline
+T & T & T & F & F & F & F \\ \hline
+T & F & T & F & F & T & F \\ \hline
+F & T & T & F & T & F & F \\ \hline
+F & F & F & T & T & T & T \\ \hline
+\end{tabular}
+\end{table}
+
+Additionally, For the second law, we can demonstrate that $\lnot (p \land q)$ is logically equivalent to $\lnot p \vee \lnot q$ using the following truth table:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textit{p} & \textit{q} & $p \land q$ & $\lnot (p \land q)$ & $\lnot p$ & $\lnot q$ & $\lnot p \vee \lnot q$ \\ \hline
+T & T & T & F & F & F & F \\ \hline
+T & F & F & T & F & T & T \\ \hline
+F & T & F & T & T & F & T \\ \hline
+F & F & F & T & T & T & T \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection*{Contrapositive}
+\addcontentsline{toc}{subsection}{Contrapositive}
+
+The \textbf{contrapositive} of the conditional proposition $p \rightarrow q$ is the proposition $\lnot q \rightarrow \lnot p$.\\
+
+For example, consider the following proposition (Assume the network is \textit{not} down and Dale can access the Internet):
+
+\begin{center}
+    If the network is down, then Dale cannot access the Internet
+\end{center}
+
+Let
+\begin{align*}
+    p&: \text{The network is down,}\\
+    q&: \text{Dale cannot access the Internet}
+\end{align*}
+
+The given proposition written symbolically is
+\begin{center}
+    $p \rightarrow q.$
+\end{center}
+
+Since the network is \textit{not} down, the hypothesis \textit{p} is \textit{false}, therefore, the proposition is \textit{true}.  The contrapositive can be written symbolically as
+\begin{center}
+    $\lnot q \rightarrow \lnot p$
+\end{center}
+
+and in words
+\begin{center}
+    If Dale can access the Internet, then the network is not down.
+\end{center}
+
+Since the hypothesis $\lnot q$ is \textit{true} and the conclusion $\lnot p$ is \textit{true}, the contrapositive is \textit{true}.\\
+
+Thus, a conditional proposition and its contrapositive are logically equivalent, as demonstrated in this truth table:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textit{p} & \textit{q} & $p \rightarrow q$ & $\lnot q \rightarrow \lnot p$ \\ \hline
+T & T & T & T \\ \hline
+T & F & F & F \\ \hline
+F & T & T & T \\ \hline
+F & F & T & T \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
