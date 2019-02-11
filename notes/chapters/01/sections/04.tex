@@ -1,3 +1,4 @@
+
 \section*{1.4 Arguments and Rules of Inference}
 \addcontentsline{toc}{section}{1.4 Arguments and Rules of Inference}
 
@@ -10,7 +11,9 @@ An \textbf{argument} consists of hypotheses together with a conclusion.  Any Arg
     If $p_1$ and $p_2$ and $\dots$ and $p_n$, then $q$.
 \end{center}
 
-If $p_1$ and $p_2$ and $\dots$ and $p_n$ are \textit{true}, then the conclusion \textit{q} must also be true, therefore, the argument is \textbf{valid}.  An argument is valid because of its form, not because of its content.\\
+If $p_1$ and $p_2$ and $\dots$ and $p_n$ are \textit{true}, then the conclusion \textit{q} must also be true, therefore, the argument is \textbf{valid}.  An argument is valid because of its form, not because of its content.
+
+\clearpage
 
 An argument is a sequence of propositions written as:
 
@@ -33,7 +36,12 @@ The symbol $\therefore$ is read ``therefore.''  The propositions $p_1$, $p_2$, $
 \subsection*{Deductive Reasoning and Truth Tables}
 \addcontentsline{toc}{subsection}{Deductive Reasoning and Truth Tables}
 
-You can use deductive reasoning and truth tables to determine the validity of an argument.  For example, consider the following argument and determine whether it is \textit{valid}.
+You can use deductive reasoning and truth tables to determine the validity of an argument.
+
+
+\subsubsection*{Example 1}
+
+For example, consider the following argument and determine whether it is \textit{valid}.\\
 
 \begin{table}[h]
 \centering
@@ -70,6 +78,8 @@ F & F & T & F & F \\ \hline
 \end{table}
 
 From this truth table, it is clear that when $p \rightarrow q$ and $p$ are $true$, the conclusion $q$ is also $true$.  Therefore, the argument is \textit{valid}.
+
+\clearpage
 
 \subsection*{Rules of Inference}
 \addcontentsline{toc}{subsection}{Rules of Inference}
@@ -138,21 +148,23 @@ A \textbf{rule of inference} is a valid argument that is used within an even lar
 \end{tabular}
 \end{table}
 
-Consider the following argument:
+\subsubsection{Example 2}
 
 \begin{center}
 If the computer has one gigabyte of memory, then it can run Minecraft.  If the computer can run Minecraft, then the graphics will be impressive.  Therefore, if the computer has one gigabyte of memory, then the graphics will be impressive.
 \end{center}
 
 If we let
-
 \begin{align*}
     p&: \text{The computer has one gigabyte of memory,}\\
     q&: \text{The computer can run Minecraft,}\\
     r&: \text{The graphics will be impressive.}
 \end{align*}
 
+
 The argument can be written symbolically as
+
+\clearpage
 
 \begin{table}[h]
 \centering
@@ -164,9 +176,11 @@ $\therefore p \rightarrow r$ & &
 \end{tabular}
 \end{table}
 
-Therefore, the argument uses the Hypothetical Syllogism rule of inference.\\
+Therefore, the argument uses the Hypothetical Syllogism rule of inference.
 
-Represent the argument
+\subsubsection{Example 3}
+
+Represent the following argument symbolically and determine the validity.
 
 \begin{table}[h]
 \centering
@@ -177,8 +191,6 @@ I ate my hat.\\
 $\therefore 2 = 3$
 \end{tabular}
 \end{table}
-
-symbolically and determine its validity.\\
 
 Let
 \begin{align*}
@@ -199,3 +211,153 @@ $\therefore p$ & &
 \end{table}
 
 If the argument is \textit{valid}, then whenever $p \rightarrow q$ and $q$ are both \textit{true}, $p$ must also be \textit{true}.  Suppose that $p \rightarrow q$ and $q$ are \textit{true}.  This is possible if $p$ is \textit{false} and $q$ is \textit{true}.  In this case, $p$ is \textit{false} (because $2 = 3$ is \textit{false}); thus, the argument is \textit{invalid}.
+
+\clearpage
+
+\subsubsection{Example 4}
+
+Represent the argument
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l}
+The bug is either in module 17 or in module 81.\\
+The bug is a numerical error.\\
+Module 81 has no numerical error.\\
+\hline
+$\therefore \text{The bug is in module 17.}$
+\end{tabular}
+\end{table}
+
+symbolically and show that it is valid.\\
+
+Let 
+\begin{align*}
+p&: \text{The bug is in module 17.}\\
+q&: \text{The bug is in module 81.}\\
+r&: \text{The bug is a numerical error.}
+\end{align*}
+
+Therefore, the argument can be written as 
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l@{\,}l@{\,}l@{\,}}
+$p \vee q$ & & \\
+$r$ & & \\
+$r \rightarrow \lnot q$ & & \\
+\hline
+$\therefore p$ & &
+\end{tabular}
+\end{table}
+
+To determine the argument's validity, we can draw intermediate conclusions using the rules of inference.\\
+
+
+From Modus Ponens,
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l@{\,}l@{\,}l@{\,}}
+$r \rightarrow \lnot q$ & & \\
+$r$ & & \\
+\hline
+$\therefore \lnot q$ & &
+\end{tabular}
+\end{table}
+
+we conclude $\lnot q$ is \textit{true}, which we can use as a hypothesis in subsequent, intermediate arguments.
+
+\clearpage
+
+From Disjunctive Syllogism,
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l@{\,}l@{\,}l@{\,}}
+$\lnot q$ & & \\
+$p \vee q$ & & \\
+\hline
+$\therefore p$ & &
+\end{tabular}
+\end{table}
+
+we conclude that $p$ is \textit{true}, therefore, the argument as a whole is \textit{valid}.
+
+\subsubsection{Example 5}
+
+Determine the validity of the argument using rules of inference.\\
+
+If the Chargers get a good linebacker, then the Chargers can beat the Brancos.  If the Chargers can beat the Brancos, then the Chargers can bet the Jets.  If the Chargers can beat the Broncos, then the Chargers can beat the Dolphins.  The Chargers get a good linebacker.  Therefore, the Chargers can beat the Jets and the Chargers can beat the Dolphins.\\
+
+Let
+\begin{align*}
+p&: \text{Chargers get a good linebacker.}\\
+q&: \text{Chargers can beat the Brancos.}\\
+r&: \text{Chargers can beat the Jets.}\\
+s&: \text{Chargers can beat the Dolphins.}\\
+\end{align*}
+
+Therefore, the argument can be written as
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l@{\,}l@{\,}l@{\,}}
+$p \rightarrow q$ & & \\
+$q \rightarrow r$ & & \\
+$q \rightarrow s$ & & \\
+$p$ & & \\
+\hline
+$\therefore r \land s$ & &
+\end{tabular}
+\end{table}
+
+To determine the argument's validity, we can draw intermediate conclusions using the rules of inference.
+
+\clearpage
+
+From Modus Ponens,
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l@{\,}l@{\,}l@{\,}}
+$p \rightarrow q$ & & \\
+$p$ & & \\
+\hline
+$\therefore q$ & &
+\end{tabular}
+\end{table}
+
+we conclude $q$, which we can use as a hypothesis in the following argument.
+
+From Modus Ponens,
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l@{\,}l@{\,}l@{\,}}
+$q \rightarrow r$ & & \\
+$q$ & & \\
+\hline
+$\therefore r$ & &
+\end{tabular}
+\end{table}
+
+we conclude $r$.
+
+From Modus Ponens,
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l@{\,}l@{\,}l@{\,}}
+$q \rightarrow s$ & & \\
+$q$ & & \\
+\hline
+$\therefore s$ & &
+\end{tabular}
+\end{table}
+
+we conclude $s$.\\
+
+We used Modus Ponens three times to conclude that $q$, $r$, and $s$ are \textit{true}.  Therefore, $r \land s$ is \textit{true}, thus the argument is \textit{valid}.
+
+
