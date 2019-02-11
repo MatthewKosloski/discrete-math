@@ -1,0 +1,180 @@
+\section*{1.5 Quantifiers}
+\addcontentsline{toc}{section}{1.5 Quantifiers}
+
+\subsection*{Propositional Function}
+\addcontentsline{toc}{subsection}{Propositional Function}
+
+Consider the statement
+\begin{center}
+\textit{p}: $n$ is an odd integer.
+\end{center}
+
+It is not a proposition because the truth value is predicated on $n$.  Most statements in math are similar to this, therefore, we must extend the system of logic to include such statements.\\
+
+A \textbf{propositional function} $P(x)$ is a function with respect to a set $D$, where each $x \in D$.  We call $D$ the \textbf{domain of discourse}.
+
+\subsubsection*{Example 1}
+
+Let
+\begin{align*}
+P(n): n \text{ is an odd integer.}
+\end{align*}
+
+Then $P$ is a propositional function with respect to set $Z^+$ (set of positive integers).  For each $n \in Z^+$, $P(n)$ is a proposition.\\
+
+Let
+\begin{align*}
+P(1)&: 1 \text{ is an odd integer},\\
+P(2)&: 2 \text{ is an odd integer}
+\end{align*}
+
+Clearly, $P(1)$ is \textit{true} and $P(2)$ is \textit{false}.\\
+
+\textbf{Remember: A propositional function $P$ by itself is neither \textit{true} nor \textit{false}; however, for each $x$ in the domain of discourse, $P(x)$ is a proposition and is, therefore, either \textit{true} or \textit{false}.}\\
+
+The following is a list of valid propositional functions:
+
+\begin{enumerate}[label=(\alph*)]
+\item $n^2 + 2n$ is an odd integer (domain of discourse = $Z^+$)
+\item $x^2 - x - 6 = 0$ (domain of discourse = $R$)
+\item The restaurant rated over two stars (domain of discourse = rated restaurants)
+\end{enumerate}
+
+(c) by itself is not a proposition; however, ``restaurant'' can be replaced with a restaurant, such as ``Portillo's'', to produce a proposition.
+
+\subsection*{Universally Quantified Statement}
+\addcontentsline{toc}{subsection}{Universally Quantified Statement}
+
+Let $P$ be a propositional function with domain of discourse $D$.  Then,
+
+\[
+    \forall x P(x)
+\]
+
+is said to be a \textbf{universally quantified statement}.  It is \textit{true} if $P(x)$ is \textit{true} for every $x$ in $D$.  It is \textit{false} if $P(x)$ is \textit{false} for at least one $x$ in $D$.  Such an $x$ that makes $P(x)$ \textit{false} is a \textbf{counterexample}.  The symbol $\forall$ may be read ``for every'', ``for all'', or ``for any.''\\
+
+To prove that
+
+\[
+    \forall x P(x)
+\]
+
+is \textit{true}, we must examine \textit{every} value of $x$ in set $D$ to show that for every $x$, $P(x)$ is \textit{true}.  However, it is much easier to find a counterexample such that $P(x)$ is \textit{false}.\\
+
+\textbf{Remember: To disprove $\forall x P(x)$, find one $x$ in set $D$ such that $P(x)$ is \textit{false}.}
+
+\subsubsection*{Example 2}
+
+Consider the universally quantified statement with domain of discourse \textbf{R}.
+
+\[
+    \forall x (x^2 \geq 0).
+\]
+
+The statement is \textit{true} because, \textit{for every} real number $x$, $x^2 \geq 0$.
+
+\subsubsection*{Example 3}
+
+The universally quantified statement
+\begin{center}
+    for every real number $x$, if $x > 1$, then $x + 1 > 1$
+\end{center}
+
+is \textit{true}.  If $x \leq 1$, the hypothesis $x > 1$ is \textit{false}, therefore, the proposition is \textit{true}.  If $x > 1$, since
+
+\[
+    x + 1 > x \text{ and } x > 1,    
+\]
+
+we conclude that $x + 1 > 1$, so the conclusion is \textit{true}.  If $x > 1$, the hypothesis and conclusion are both \textit{true}, hence the universally quantified statement is \textit{true}.
+
+\subsection*{Existentially Quantified Statement}
+\addcontentsline{toc}{subsection}{Existentially Quantified Statement}
+
+Let $P$ be a propositional function with domain of discourse $D$.  Then,
+
+\[
+    \exists x P(x)
+\]
+
+is said to be an \textbf{existentially quantified statement}.  It is \textit{true} if $P(x)$ is \textit{true} for at least one $x$ in $D$.  It is \textit{false} if $P(x)$ is \textit{false} for every $x$ in $D$.  The symbol $\exists$ is read as ``there exists'', ``for some'', or ``for at least one.''
+
+\subsubsection*{Example 4}
+
+Consider the existentially quantified statement with domain of discourse \textbf{R}.
+
+\[
+    \exists x \left( \frac{x}{x^2 + 1} = \frac{2}{5} \right)
+\]
+
+If we can find one real number $x$ such that $\left(\frac{x}{x^2 + 1} = \frac{2}{5}\right)$, then the existentially quantified statement is \textit{true}.\\
+
+If $x = 2$, then,
+
+\[
+    \left( \frac{2}{2^2 + 1} = \frac{2}{5} \right)
+\]
+
+therefore, $\exists x \left( \frac{x}{x^2 + 1} = \frac{2}{5} \right)$ is \textit{true}.
+
+\subsubsection*{Example 5}
+
+Verify that the following existentially quantified statement is \textit{false}.
+
+\[
+    \exists x \in \textbf{R} \left( \frac{1}{x^2 + 1} > 1 \right)
+\]
+
+It is \textit{false} if $\left( \frac{1}{x^2 + 1} > 1 \right)$ is \textit{false} for every real number $x$.
+
+\[
+    \exists x \in \textbf{R} \left( \frac{1}{x^2 + 1} > 1 \right)
+\]
+
+is \textit{false} when
+
+\[
+    \forall x \in \textbf{R} \left( \frac{1}{x^2 + 1} \leq 1 \right)
+\]
+
+is \textit{true}.  Therefore, we must show that $\left( \frac{1}{x^2 + 1} \leq 1 \right)$ is \textit{true} for every real number $x$.
+
+\subsection*{De Morgan's Laws for Logic}
+\addcontentsline{toc}{subsection}{De Morgan's Laws for Logic}
+
+\begin{align*}
+    \lnot(\forall x P(x)) \equiv \exists x \lnot P(x)\\
+    \lnot(\exists x P(x)) \equiv \forall x \lnot P(x)\\
+\end{align*}
+
+\subsubsection{Example 6}
+
+Write the following statement symbolically and write the negation symbolically and in words.
+\begin{center}
+    Every rock fan loves U2.
+\end{center}
+
+Let
+\begin{align*}
+    P(x) &= x \text{ loves U2},\\
+    D &= \text{ the set of rock fans}.
+\end{align*}
+
+Then, the statement is symbolically written as 
+
+\[
+    \forall x P(x).
+\]
+
+And the negation, $\lnot (\forall x P(x))$, is
+
+\[
+    \exists x \lnot P(x),
+\]
+
+which can be read as
+
+\begin{center}
+    There exists a rock fan who does not love U2.
+\end{center}
+
