@@ -178,3 +178,206 @@ which can be read as
     There exists a rock fan who does not love U2.
 \end{center}
 
+\subsubsection{Example 7}
+
+Write the following statement symbolically and write the negation symbolically and in words.
+\begin{center}
+    Some birds cannot fly
+\end{center}
+
+Let
+\begin{align*}
+    P(x) &= x \text{ can fly},\\
+    D &= \text{ the set of all birds}.
+\end{align*}
+
+Then, the statement is symbolically written as 
+
+\[
+    \exists x \lnot P(x).
+\]
+
+And the negation, $\lnot (\exists x \lnot P(x))$, is
+
+\[
+    \forall x \lnot\lnot P(x) = \forall x P(x)
+\]
+
+which can be read as
+
+\begin{center}
+    All birds can fly.
+\end{center}
+
+\subsection*{Generalizing Propositions}
+\addcontentsline{toc}{subsection}{Generalizing Propositions}
+
+A universally quantified statement such as the one above generalizes the proposition
+
+\[
+    p_1 \land p_2 \land \dots \land p_n
+\]
+
+in the sense that the individual propositions are replaced by a family $P(x)$.  In other words,
+
+\[
+    p_1 \land p_2 \land \dots \land p_n \equiv \forall x P(x).
+\]
+
+Similarly, an existentially quantified statement generalizes the proposition
+
+\[
+    p_1 \vee p_2 \vee \dots \vee p_n
+\]
+
+in the sense that the individual propositions are replaced by a family $P(x)$.  In other words,
+
+\[
+    p_1 \vee p_2 \vee \dots \vee p_n \equiv \exists x P(x).
+\]
+
+\subsubsection{Example 7}
+
+If the domain of discourse of the propositional function \textit{P} is \{-1, 0, 1\}, then $\forall x P(x)$ is equivalent to
+
+\[
+    P(-1) \land P(0) \land P(1).
+\]
+
+And by De Morgan's laws of logic, the negation $\lnot(P(-1) \land P(0) \land P(1))$ is logically equivalent to
+
+\[
+    \lnot P(-1) \vee \lnot P(0) \vee \lnot P(1) \equiv \exists x \lnot P(x)
+\]
+
+\subsubsection{Example 8}
+
+The following statement
+
+\begin{center}
+    All that glitters is not gold
+\end{center}
+
+has multiple interpretations.  Such interpretations include
+
+\begin{enumerate}[label=(\alph*)]
+\item Every object that glitters is not gold
+\item Some object that glitters is not gold
+\end{enumerate}
+
+If we let
+\begin{align*}
+    P(x)&: x \text{ glitters,}\\
+    Q(x)&: x \text{ is gold,}
+\end{align*}
+
+then (a) is symbolically written as
+
+\[
+    \forall x (P(x) \rightarrow \lnot Q(x))
+\]
+
+and (b) is symbolically written as
+
+\[
+    \exists x (P(x) \land \lnot Q(x)).
+\]
+
+Since $\lnot(p \rightarrow q) \equiv p \land \lnot q$, (b) is logically equivalent to
+
+\[
+    \exists x \lnot (P(x) \rightarrow Q(x)).
+\]
+
+Since  $\exists x \lnot P(x) \equiv \lnot(\forall x P(x))$, (b) is also logically equivalent to
+
+\[
+    \lnot (\forall x P(x) \rightarrow Q(x)).
+\]
+
+Thus, the correct interpretation results from negating the original statement.
+
+\clearpage
+
+\subsection*{Rules of Inference for Quantified Statements}
+\addcontentsline{toc}{subsection}{Rules of Inference for Quantified Statements}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+  
+    \textbf{Universal instantiation}&
+    \begin{tabular}{l@{\,}l@{\,}l@{\,}}
+    $\forall x P(x)$ & & \\
+    \hline
+    $\therefore P(d) \text{ if \textit{d}} \in D$ & &
+    \end{tabular}\\& \\ 
+    
+    \textbf{Universal generalization}&
+    \begin{tabular}{l@{\,}l@{\,}l@{\,}}
+    $P(d) \text{ for every \textit{d}} \in D$ & & \\
+    \hline
+    $\therefore \forall x P(x)$ & &
+    \end{tabular}\\& \\
+    
+    \textbf{Existential instantiation}&
+    \begin{tabular}{l@{\,}l@{\,}l@{\,}}
+    $\exists x P(x)$ & & \\
+    \hline
+    $\therefore P(d) \text{ for some \textit{d}} \in D$ & &
+    \end{tabular}\\& \\ 
+    
+    \textbf{Existential generalization}&
+    \begin{tabular}{l@{\,}l@{\,}l@{\,}}
+    $P(d) \text{ for some \textit{d}} \in D$ & & \\
+    \hline
+    $\therefore \exists x P(x)$ & &
+    \end{tabular}\\& \\
+  
+\end{tabular}
+\end{table}
+
+\subsubsection{Example 9}
+
+Let
+\begin{align*}
+P(x)&: x \text{ owns a laptop}\\
+D&: \{x \mid x \text{ is a student in MA 309}\}
+\end{align*}
+
+Suppose that Matthew, who is taking MA 309, owns a laptop; in symbols, $P(Matthew)$ is \textit{true}.  Then, by existential generalization, $\exists x P(x)$ is \textit{true}.
+
+\subsubsection{Example 10}
+
+Write the argument symbolically and then, using rules of inference, show that it is valid.
+\begin{center}
+    For every real number $x$, if $x$ is an integer, then $x$ is a rational number.  The number $\sqrt{2}$ is not rational.  Therefore, $\sqrt{2}$ is not an integer.
+\end{center}
+
+\clearpage
+
+Let
+\begin{align*}
+P(x)&: x \text{ is an integer,}\\
+Q(x)&: x \text{ is rational.}
+\end{align*}
+
+Then the argument is written symbolically as 
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l@{\,}l@{\,}l@{\,}}
+  $\forall x \in \textbf{R}(P(x) \rightarrow Q(x))$ & & \\
+  $\lnot Q(\sqrt{2})$ & & \\
+\hline
+ $\therefore \lnot P(\sqrt{2}) $ & &
+\end{tabular}
+\end{table}
+
+Since $\sqrt{2} \in \textbf{R}$, we may use Universal instantiation to conclude $P(\sqrt{2}) \rightarrow Q(\pi)$.  Combining $P(\sqrt{2}) \rightarrow Q(\pi)$ and $\lnot Q(\pi)$, we use modus tollens to conclude $\lnot P(\sqrt{2})$.
+
+
+
+
+
+
