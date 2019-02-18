@@ -1,0 +1,150 @@
+\section*{2.1 Mathematical Systems, Direct Proofs, and Counterexamples}
+\addcontentsline{toc}{section}{2.1 Mathematical Systems, Direct Proofs, and Counterexamples}
+
+A \textbf{mathematical system} consists of \textbf{axioms}, which are assumed to be true and \textbf{definitions}, which are used to create new concepts in terms of existing ones.  Within a mathematical system, we can derive a \textbf{theorem}, which is a proposition that has been proved to be true.\\
+
+There are two special types of theorems:
+
+\begin{itemize}
+    \item \textbf{lemma:} not interesting in its own right, but useful for proving other theorems.
+    \item \textbf{corollary:} follows easily from another theorem.
+\end{itemize}
+
+A \textbf{proof} is an argument that establishes the truth of a theorem.  Logic is used to analyze proofs.
+
+\subsection*{Mathematical Systems}
+\addcontentsline{toc}{subsection}{Mathematical Systems}
+
+\subsubsection*{Example 1}
+
+One example of a mathematical system is Euclidean geometry.  This mathematical system contains the following theorem and corollary:
+
+\begin{itemize}
+    \item \textbf{theorem:} If two sides of a triangle are equal, then the angles opposite them are equal.
+    \item \textbf{corollary:} If a triangle is equilateral, then it is equiangular.
+\end{itemize}
+
+The corollary follows immediately from the theorem.
+
+\subsection*{Direct Proofs}
+\addcontentsline{toc}{subsection}{Direct Proofs}
+
+Theorems are often of the from
+\begin{center}
+    For all $x_1, x_2, \dots, x_n$, if $p(x_1, x_2, \dots, x_n)$, then $q(x_1, x_2, \dots, x_n)$.
+\end{center}
+
+The above is true provided that the conditional proposition $p \rightarrow q$ is true for all $x_1, x_2, \dots, x_n$ in the domain.  A \textbf{direct proof} assumes that $p(x_1, x_2, \dots, x_n)$ is true and then, using $p(x_1, x_2, \dots, x_n)$ as well as other axioms, definitions, previously derived theorems, and rules of inference, shows directly that $q(x_1, x_2, \dots, x_n)$ is true.\\
+
+For example, to use the terms ``even integer'' and ``odd integer'' in a proof, we must first define them.
+\begin{center}
+    An integer $n$ is \textit{even} if there exists an integer \textit{k} such that $n = 2k$.\\
+    An integer $n$ is \textit{odd} if there exists an integer \textit{k} such that $n = 2k + 1$.
+\end{center}
+
+\subsubsection*{Example 2}
+
+Give a direct proof of the following statement:
+\begin{center}
+    For all integers \textit{m} and \textit{n}, if \textit{m} is odd and \textit{n} is even, then $m + n$ is odd.
+\end{center}
+
+We begin by first writing out the hypothesis and conclusion:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l}
+\textit{m} is odd and \textit{n} is even. (Hypothesis)\\
+$\dots$\\
+$m + n$ is odd. (Conclusion)
+\end{tabular}
+\end{table}
+
+We begin to fill in the gaps using the definitions of even and odd:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l}
+\textit{m} is odd and \textit{n} is even. (Hypothesis)\\
+\textit{m} = $2k_1 + 1$ ($k_1$ is an integer)\\
+\textit{n} = $2k_2$ ($k_2$ is an integer)\\
+$\dots$\\
+$m + n$ is odd. (Conclusion)
+\end{tabular}
+\end{table}
+
+Finally, to derive our conclusion, we use the definition of odd once again:
+\begin{align*}
+    m + n &= (2k_1 + 1) + 2k_2\\
+    &= 2(k_1 + k_2) + 1
+\end{align*}
+
+Our final proof:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l}
+\textit{m} is odd and \textit{n} is even. (Hypothesis)\\
+\textit{m} = $2k_1 + 1$ ($k_1$ is an integer)\\
+\textit{n} = $2k_2$ ($k_2$ is an integer)\\
+$m + n = 2(k_1 + k_2) + 1$\\
+$m + n$ is odd. (Conclusion)
+\end{tabular}
+\end{table}
+
+\subsubsection*{Example 3}
+
+Give a direct proof of the following statement:
+\begin{center}
+    For all sets $X$, $Y$, and $Z$, $X \intersection (Y - Z) = (X \intersection Y) - (X \intersection Z)$
+\end{center}
+
+We begin by first writing out the hypothesis and conclusion:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l}
+$X$, $Y$, and $Z$ are sets. (Hypothesis)\\
+$\dots$\\
+$X \intersection (Y - Z) = (X \intersection Y) - (X \intersection Z)$ (Conclusion)
+\end{tabular}
+\end{table}
+
+We are trying to conclude that sets $X \intersection (Y - Z)$ and $(X \intersection Y) - (X \intersection Z)$ are equal.  Recall the definition of set equality:
+\begin{center}
+    For every \textit{x}, if $x \in X$, then $x \in Y$\\
+    For every \textit{x}, if $x \in Y$, then $x \in X$
+\end{center}
+
+We begin to fill in the gaps using the definition of set equality:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l}
+$X$, $Y$, and $Z$ are sets. (Hypothesis)\\
+If $x \in X \intersection (Y - Z)$, then $x \in (X \intersection Y) - (X \intersection Z)$\\
+If $x \in (X \intersection Y) - (X \intersection Z)$, then $x \in X \intersection (Y - Z)$\\
+$\dots$\\
+$X \intersection (Y - Z) = (X \intersection Y) - (X \intersection Z)$ (Conclusion)
+\end{tabular}
+\end{table}
+
+To derive our conclusion, we must first prove
+\begin{center}
+    If $x \in X \intersection (Y - Z)$, then $x \in (X \intersection Y) - (X \intersection Z)$
+\end{center}
+
+and 
+\begin{center}
+    If $x \in (X \intersection Y) - (X \intersection Z)$, then $x \in X \intersection (Y - Z)$.
+\end{center}
+
+To prove the former, let $x \in X \intersection (Y - Z)$.  By the definition of intersection, if $x \in X \intersection (Y - Z)$, then $x \in X$ and $x \in Y - Z$.  By the definition of set difference, if $x \in Y - Z$, then $x \in Y$, but $x \notin Z$.  If $x \in X$ and $x \in Y$, then $x \in X \intersection Y$.  If $x \in X \intersection Y$ and $x \notin Z$, then $x \notin X \intersection Z$.  Therefore, if $x \in X \intersection (Y - Z)$, then $x \in (X \intersection Y) - (X \intersection Z)$.\\
+
+To prove the latter, let $x \in (X \intersection Y) - (X \intersection Z)$.  By set difference, if $x \in (X \intersection Y) - (X \intersection Z)$, then $x \in (X \intersection Y)$ and $x \notin (X \intersection Z)$.  If $x \in (X \intersection Y)$, then, by intersection, $x \in X$ and $x \in Y$.  If $x \in X$ and $x \notin X \intersection Z$, then $X \notin Z$.  By the definition of set difference, since $x \in Y$ and $x \notin Z$, $x \in Y - Z$.  Finally, since $x \in X$ and $x \in Y - Z$, then $x \in X \intersection (Y - Z)$.  Therefore, if $x \in (X \intersection Y) - (X \intersection Z)$, then $x \in X \intersection (Y - Z)$.\\
+
+Since we proved both of these equations, it follows that
+
+\begin{center}
+    $X \intersection (Y - Z) = (X \intersection Y) - (X \intersection Z)$.
+\end{center}
