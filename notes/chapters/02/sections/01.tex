@@ -26,10 +26,19 @@ One example of a mathematical system is Euclidean geometry.  This mathematical s
 
 The corollary follows immediately from the theorem.
 
+\subsubsection*{Example 2}
+
+Examples of theorems about real numbers are:
+
+\begin{itemize}
+    \item $x \times 0 = 0$ for every real number $x$.
+    \item For all real numbers $x, y, z$, if $x \leq y$ and $y \leq z$, then $x \leq z$.
+\end{itemize}
+
 \subsection*{Direct Proofs}
 \addcontentsline{toc}{subsection}{Direct Proofs}
 
-Theorems are often of the from
+Theorems are often of the form
 \begin{center}
     For all $x_1, x_2, \dots, x_n$, if $p(x_1, x_2, \dots, x_n)$, then $q(x_1, x_2, \dots, x_n)$.
 \end{center}
@@ -42,7 +51,7 @@ For example, to use the terms ``even integer'' and ``odd integer'' in a proof, w
     An integer $n$ is \textit{odd} if there exists an integer \textit{k} such that $n = 2k + 1$.
 \end{center}
 
-\subsubsection*{Example 2}
+\subsubsection*{Example 3}
 
 Give a direct proof of the following statement:
 \begin{center}
@@ -59,6 +68,8 @@ $\dots$\\
 $m + n$ is odd. (Conclusion)
 \end{tabular}
 \end{table}
+
+\clearpage
 
 We begin to fill in the gaps using the definitions of even and odd:
 
@@ -92,7 +103,7 @@ $m + n$ is odd. (Conclusion)
 \end{tabular}
 \end{table}
 
-\subsubsection*{Example 3}
+\subsubsection*{Example 4}
 
 Give a direct proof of the following statement:
 \begin{center}
@@ -148,3 +159,86 @@ Since we proved both of these equations, it follows that
 \begin{center}
     $X \intersection (Y - Z) = (X \intersection Y) - (X \intersection Z)$.
 \end{center}
+
+The following example illustrates the use of \textbf{subproofs}.
+
+\subsubsection*{Example 5}
+
+If \textit{a} and \textit{b} are real numbers, we define $min\{a, b\}$
+\begin{align*}
+    min\{a, b\} &= a \text{ (if $a < b$)}\\
+    min\{a, b\} &= a \text{ (if $a = b$)}\\
+    min\{a, b\} &= b \text{ (if $a > b$)}.
+\end{align*}
+
+Give a direct proof of the following statement.
+\begin{center}
+    For all real numbers $d, d_1, d_2, x$, if $d = min\{d_1, d_2\}$ and $x \leq d$, then $x \leq d_1$ and $x \leq d_2$.
+\end{center}
+
+We begin by first writing out the hypothesis and conclusion:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l}
+$d = min\{d_1, d_2\}$ and $x \leq d$ (Hypothesis)\\
+$\dots$\\
+$x \leq d_1$ and $x \leq d_2$ (Conclusion)
+\end{tabular}
+\end{table}
+
+To help us better understand, we give an example using real numbers.  Remember, since we are trying to prove a universally quantified statement, one example where the statement is true is not a proof.\\
+
+Let
+\begin{align*}
+    d_1 &= 2\\
+    d_2 &= 4\\
+    d &= min\{d_1, d_2\} = 2\\
+    x &= 1
+\end{align*}
+
+From the definition of $min\{a, b\}$ from above, the minimum $d$ of two numbers, $d_1$ and $d_2$, is equal to one of the two numbers and less than or equal to the other one.  In other words,
+\begin{center}
+    $d \leq d_1$ and $d \leq d_2$.  
+\end{center}
+
+We know that $x \leq d$, so, by the Theorem in Example 2,
+
+\begin{center}
+    If $x \leq d$ and $d \leq d_1$, then $x \leq d_1$.\\
+    If $x \leq d$ and $d \leq d_2$, then $x \leq d_2$.
+\end{center}
+
+The outline of our proof is now:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l}
+$d = min\{d_1, d_2\}$ and $x \leq d$ (Hypothesis)\\
+$d \leq d_1$ and $d \leq d_2$ (Definition of ``minimum'')\\
+From $x \leq d$ and $d \leq d_1$, deduce $x \leq d_1$ (Theorem).\\
+From $x \leq d$ and $d \leq d_2$, deduce $x \leq d_2$ (Theorem).\\
+$x \leq d_1$ and $x \leq d_2$ (Conclusion)
+\end{tabular}
+\end{table}
+
+\subsection*{Disproving a Universally Quantified Statement}
+\addcontentsline{toc}{subsection}{Disproving a Universally Quantified Statement}
+
+Recall that to disprove $\forall x P(x)$, you need to find one $x$ in the domain of discourse such that $P(x)$ is false.  Such a value for x is called a \textit{counterexample}.
+
+\subsection*{Example 6}
+
+The statement
+\begin{center}
+    $\forall n \in \textbf{Z}^+ (2^n + 1 \text{ is prime})$
+\end{center}
+
+is false.  If we assume that it is true, to disprove it, we just need to find one $n$ that is a positive integer where $2^n + 1$ is false.  A counterexample is $n = 3$, because $2^3 + 1 = 9$ is false.
+
+\subsection*{Problem-Solving Tips}
+\addcontentsline{toc}{subsection}{Problem-Solving Tips}
+
+To construct a proof of a universally quantified statement, first write down the hypothesis and the conclusion.  To construct the argument, remind yourself what you know about the terms (e.g., ``even,'' ``odd''), symbols (e.g., $X \intersection Y$, $min\{d_1, d_2\}$).  To understand what is to be proved, look at some specific values in the domain.  When proving a universally quantified statement, simply showing the statement is true for specific values is not sufficient; however, it may help you understand the statement.  To disprove a universally quantified statement, find one element $x$ in the domain that makes the propositional function $P(x)$ false.  If asked to prove or disprove a universally quantified statement, you can begin by trying to prove it.  If you succeed, you are finished.  If not, try to disprove it with a counterexample.
+
+\clearpage

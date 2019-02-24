@@ -1,0 +1,173 @@
+\section*{2.4 Mathematical Induction}
+\addcontentsline{toc}{section}{2.4 Mathematical Induction}
+
+Suppose there are 5 blocks on an infinitely long table.  Also, suppose that
+\begin{center}
+    The first block is marked with an ``x'',\\
+    For all $n$, if block $n$ is marked, then block $n + 1$ is marked
+\end{center}
+
+By examining the five blocks on the table, one-by-one, and determining that they are marked with an ``x'', you are performing \textbf{mathematical induction}.\\
+
+Let $S_n$ denote the sum of the first $n$ positive integers:
+
+\[
+    S_n = 1 + 2 + \dots + n
+\]
+
+Suppose someone claims that, for all $n \geq 1$,
+
+\[
+    S_n = \frac{n(n + 1)}{2}.
+\]
+
+In other words,
+\begin{align*}
+    S_1 &= \frac{1(2)}{2} = 1\\
+    S_2 &= \frac{2(3)}{2} = 3\\
+    &\dots
+\end{align*}
+
+Obviously, the equation is true for $S_1$ and $S_2$, so we \textit{assume} it is true for $S_n$.  But what about $S_{n + 1}$?  Assuming $S_n$ is true, we must show that 
+
+\[
+    S_{n + 1} = \frac{(n + 1)(n + 2)}{2}
+\]
+
+is also true.\\
+
+Recall that
+
+\[
+    S_n = 1 + 2 + \dots + n.
+\]
+
+Therefore,
+
+\[
+    S_{n + 1} = 1 + 2 + \dots + n + (n + 1).
+\]
+
+Notice that $S_n$ is contained within $S_{n + 1}$.  In other words, the first part of $S_{n + 1}$ is $S_n$.  Because of
+
+\[
+    S_n = \frac{n(n + 1)}{2},
+\]
+
+we have
+
+\[
+    S_{n + 1} = S_n + (n + 1) = \frac{n(n + 1)}{2} + (n + 1).
+\]
+
+Performing algebraic manipulation, we have
+
+\begin{align*}
+    S_{n + 1} = \frac{n(n + 1)}{2} + (n + 1) &= \frac{n(n + 1)}{2} + \frac{2(n + 1)}{2}\\
+    &= \frac{n(n + 1) + 2(n + 1)}{2}\\
+    &= \frac{n^2 + 3n + 2}{2}\\
+    &= \frac{(n + 1)(n + 2)}{2}\\
+\end{align*}
+
+Thus, assuming $S_n = \frac{n(n + 1)}{2}$, we have proved that $S_{n + 1}$ is
+
+\[
+    \frac{(n + 1)(n + 2)}{2}
+\]
+
+and that all of the equations for all $n$ are true.  Our proof using mathematical induction consisted of two steps.  We first verified that $S_1$ was true.  Second, we \textit{assumed} that $S_n$ was true to prove that $S_{n + 1}$ is true.  The trick is to relate a statement $n$ to statement $n + 1$.
+
+\subsection*{Principle of Mathematical Induction}
+\addcontentsline{toc}{subsection}{Principle of Mathematical Induction}
+
+Suppose we have a propositional function $S(n)$ whose domain of discourse is all positive integers.  Suppose that
+\begin{align*}
+    &\text{$S(1)$ is true; \textbf{(Basis Step)}}\\
+    &\text{for all $n \geq 1$, if $S(n)$ is true, then $S(n + 1)$ is true. \textbf{(Inductive Step)}}\\
+\end{align*}
+
+Then, $S(n)$ is true for every positive integer $n$.  The Basis Step is to prove that the propositional function $S(n)$ is true for the smallest value in the domain of discourse.
+
+\clearpage
+
+\subsubsection*{Example 1}
+
+Use induction to show that $n! \geq 2^{n - 1}$ for all $n \geq 1$.\\\\We define $n!$ (n factorial) as
+
+\[ n! = \begin{cases} 
+    1 & \text{if } n = 0 \\
+    n(n - 1)(n - 2)\dots 2 \cdot 1 & \text{if } n \geq 1
+ \end{cases}
+\]
+
+In other words, if $n \geq 1$, $n!$ is equal to the product of all the integers between 1 and $n$ inclusive.  For example, 
+
+\[
+ 3! = 3 \cdot 2 \cdot 1 = 6.
+\]
+
+We first perform the \textbf{basis step}, where we show that $n! \geq 2^{n - 1}$ is true when $n = 1$:
+
+\[
+ 1! = 1 \geq 2^{1 - 1} = 2^0 = 1
+\]
+
+Next, for the \textbf{inductive step}, we \textit{assume} that $n! \geq 2^{n - 1}$ is true for all $n \geq 1$ and prove that it is also true for $(n + 1)$.  Therefore, we want to prove that
+
+\[
+    (n + 1)! \geq 2^{n}
+\]
+
+is true.
+
+To prove the above, notice that
+
+\[
+ (n + 1)! = (n + 1)(n!)
+\]
+
+Now,
+\begin{align*}
+    (n + 1)! &= (n + 1)(n!)\\
+    &\geq (n + 1)2^{n - 1}\\
+    &\geq 2 \cdot 2^{n - 1}\\
+    &= 2^n.
+\end{align*}
+
+\subsubsection*{Example 2}
+
+Use induction to show that if $r \neq 1$,
+
+\[
+    a + ar^1 + ar^2 + \dots + ar^n = \frac{a(r^{n + 1} - 1)}{r - 1}
+\]
+
+for all $n \geq 0$.\\
+
+\textbf{Basis Step}\\
+
+Since $0$ is the smallest number in the domain, we must prove that the above equation is true for when $n = 0$.  When $n = 0$,
+
+\[
+    a = \frac{a(r^1 - 1)}{r - 1}
+\]
+
+which is true.\\
+
+\textbf{Inductive Step}\\
+
+We assume that, if $r \neq 1$,
+
+\[
+    a + ar^1 + ar^2 + \dots + ar^n = \frac{a(r^{n + 1} - 1)}{r - 1}
+\]
+
+is true for all $n \geq 0$.\\
+
+We must prove that it is true for $n + 1$.  Thus,
+\begin{align*}
+    a + ar^1 + ar^2 + \dots + ar^n + ar^{n + 1} &= \frac{a(r^{n + 1} - 1)}{r - 1} + ar^{n + 1}\\
+    &= \frac{a(r^{n + 1} - 1)}{r - 1} + \frac{ar^{n + 1}(r - 1)}{r - 1}\\
+    &= \frac{a(r^{n + 2} - 1)}{r - 1}
+\end{align*}
+
